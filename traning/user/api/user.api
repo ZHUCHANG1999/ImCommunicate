@@ -1,0 +1,31 @@
+syntax = "v1"
+
+info (
+	title: "用户服务api"
+	desc:  "用户服务api内容"
+)
+
+type (
+	UserReq {
+		Id string `json:"id"`
+	}
+	UserResp {
+		Id    string `json:"id"`
+		Name  string `json:"name"`
+		Phone string `json:"phone"`
+	}
+)
+
+service User {
+	@handler user
+	get /user (UserReq) returns (UserResp)
+}
+
+@server (
+	middleware: LoginVerification
+)
+service User {
+	@handler userinfo
+	get /userinfo (UserReq) returns (UserResp)
+}
+

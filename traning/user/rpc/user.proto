@@ -1,0 +1,36 @@
+syntax = "proto3";  //指定proto版本
+
+package user; //默认包名
+
+option go_package ="./user";
+
+//定义服务名
+service User{
+  // 定义rpc方法
+  rpc GetUser(GetUserReq) returns (GetUserResp);
+  rpc Ping(Request) returns (Response);
+  rpc Create(CreateReq) returns (CreateResp);
+}
+
+message Request {}
+message Response {}
+
+message GetUserReq {
+  string id =1;
+}
+
+message GetUserResp {
+  string id = 1;
+  string name = 2;
+  string phone = 3 ;
+}
+
+message CreateReq{
+  string id = 1;
+  string name = 2;
+  string phone = 3 ;
+}
+
+message CreateResp{
+
+}
