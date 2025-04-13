@@ -1,3 +1,4 @@
+#! /bin/bash
 reso_addr='registry.cn-hangzhou.aliyuncs.com/easy-im/user-rpc-test'
 tag='latest'
 
@@ -12,3 +13,5 @@ docker rmi ${reso_addr}:${tag}
 docker pull ${reso_addr}:${tag}
 
 docker run -p 10001:8080 --name=${container_name} -d ${reso_addr}:${tag}
+
+docker logs ${container_name}

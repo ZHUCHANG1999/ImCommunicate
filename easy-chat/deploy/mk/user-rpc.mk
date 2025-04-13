@@ -5,14 +5,14 @@ SERVER_TYPE=rpc
 
 # 测试环境配置
 # docker的配置发布地址
-DOCKER_REPO_TEST=registry.cn-hangzhou.aliyuncs.com/easy-im/${SERVER_NAME}-${SERVER_TYPE}-dev
+DOCKER_REPO_TEST=registry.cn-hangzhou.aliyuncs.com/easy-im/${SERVER_NAME}-${SERVER_TYPE}-test
 # 测试版本
 VERSION_TEST=$(VERSION)
 # 编译的程序名称
 APP_NAME_TEST=easy-im-${SERVER_NAME}-${SERVER_TYPE}-test
 
 # 测试下的编译文件
-DOCKER_FILE_TEST=./deploy/dockerfile/Dockerfile_${SERVER_NAME}_${SERVER_TYPE}_dev
+DOCKER_FILE_TEST=./deploy/dockerfile/Dockerfile_${SERVER_NAME}_${SERVER_TYPE}_test
 
 # 测试环境的编译发布
 build-test:
