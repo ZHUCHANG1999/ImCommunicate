@@ -1,5 +1,0 @@
-Name: im.ws
-ListenOn: 0.0.0.0:10090
-
-JwtAuth:
-  AccessSecret: imooc.com
