@@ -1,0 +1,6 @@
+syntax = "v1"
+
+info (
+    title: "用户服务的实例对象"
+    author: "zc"
+)
