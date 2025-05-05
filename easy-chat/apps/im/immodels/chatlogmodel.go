@@ -1,4 +1,4 @@
-package model
+package immodels
 
 import "github.com/zeromicro/go-zero/core/stores/mon"
 
@@ -22,4 +22,8 @@ func NewChatLogModel(url, db, collection string) ChatLogModel {
 	return &customChatLogModel{
 		defaultChatLogModel: newDefaultChatLogModel(conn),
 	}
+}
+
+func MustChatLogModel(url, db string) ChatLogModel {
+	return NewChatLogModel(url, db, "chat_log")
 }
